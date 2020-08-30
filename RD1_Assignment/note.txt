@@ -87,7 +87,14 @@ http://ythsuprogram.blogspot.com/2015/09/mysql-mysqlifetcharray-expects.html
 27.debug
 https://www.hellosanta.com.tw/blog/how-to-set-up-xdebug-and-mamp-on-vscode
 
+28.如何判定下拉式選單有無被選到
+https://twpug.net/discussion/8871/%E5%A6%82%E4%BD%95%E5%88%A4%E5%AE%9A%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE%E6%9C%89%E7%84%A1%E8%A2%AB%E9%81%B8%E5%88%B0
 
+29.下拉式選單~切換預覽圖片
+http://www.blueshop.com.tw/board/FUM20041006152641OLG/BRD20061128213842FJ5.html
+
+3.如何利用下拉式選單秀出表情圖片咧？？？
+http://m.blueshop.com.tw/Thread.aspx?tbfumsubcde=BRD20030510135930G24
 
 
 
@@ -302,6 +309,15 @@ https://ithelp.ithome.com.tw/questions/10194192
 
 
   CREATE TABLE weather(
+	`datasetDescription` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+    `locationName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+    `elementName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+    `description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+    `startTime` datetime COLLATE utf8_unicode_ci NOT NULL,
+    `endTime` datetime COLLATE utf8_unicode_ci NOT NULL,
+    `value` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+)
+CREATE TABLE weatherweathertwodays(
 	`datasetDescription` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
     `locationName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
     `elementName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,

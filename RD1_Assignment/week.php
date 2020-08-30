@@ -47,7 +47,9 @@ foreach ($locations2 as $one) {
 
                     // echo "<br>".$seven['value'] . "<br>";
 
-                    $link = @mysqli_connect("localhost", "root", "root","OPENDATA",8889) or die(mysqli_connect_error());
+                    // $link = @mysqli_connect("localhost", "root", "root","OPENDATA",8889) or die(mysqli_connect_error());
+                    $link = @mysqli_connect("localhost", "root", "", "opendata", 8080) or die(mysqli_connect_error());
+
                     $result = mysqli_query($link, "set names utf8");
                     mysqli_select_db($link, "OPENDATA");
                     $sql = "INSERT INTO weather (datasetDescription, locationName, elementName, description, startTime, endTime, value) values('$one[datasetDescription]','$two[locationName]','$three[elementName]','$four[description]','$five[startTime]','$five[endTime]','$val2')";

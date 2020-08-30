@@ -41,7 +41,9 @@ foreach ($location3[0]['weatherElement'] as $three) {
     // $yy=$three['time'][1]['parameter']['parameterName'];
     // $zz=$three['time'][2]['parameter']['parameterName'];
     // $ee = [$xx,$yy,$zz];
-    $link = @mysqli_connect("localhost", "root", "root","OPENDATA",8889) or die(mysqli_connect_error());
+    // $link = @mysqli_connect("localhost", "root", "root","OPENDATA",8889) or die(mysqli_connect_error());
+    $link = @mysqli_connect("localhost", "root", "","opendata",8080) or die(mysqli_connect_error());
+
     $result = mysqli_query($link, "set names utf8");
     mysqli_select_db($link, "OPENDATA");
     $sql = "INSERT INTO weathernow (datasetDescription, locationName, elementName, startTime, endTime, parameterName) values('$datasetDescription3','$locationName3','$three[elementName]','$four[startTime]','$four[endTime]','$xx')";
